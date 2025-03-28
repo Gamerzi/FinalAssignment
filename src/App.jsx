@@ -10,24 +10,14 @@ import SignUp from './pages/Signup';
 import SignIn from './pages/Signin';
 import './App.css';
 
-const isAuthenticated = () => {
-  // Check if the user is authenticated
-  return localStorage.getItem('authToken') !== null;
-};
-
+//Removed the authentication check, it is not being used 
 const App = () => {
   return (
     <Router>
       <Routes>
         <Route path="/signup" element={<SignUp />} />
         <Route path="/signin" element={<SignIn />} />
-        <Route
-          path="/"
-          element={
-            isAuthenticated() ? <Navigate to="/signin" /> : <Navigate to="/signup" />
-          }
-        />
-        {isAuthenticated() && (
+        <Route path="/" element={<Navigate to="/signin" />} />
           <Route
             path="*"
             element={
@@ -49,8 +39,6 @@ const App = () => {
               </Container>
             }
           />
-        )}
-        {!isAuthenticated() && <Route path="*" element={<Navigate to="/signin" />} />}
       </Routes>
     </Router>
   );
