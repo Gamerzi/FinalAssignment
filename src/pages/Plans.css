@@ -1,0 +1,133 @@
+
+
+.plans-container {
+  margin-top: 30px;
+  padding: 20px;
+  font-family: sans-serif;
+
+}
+
+h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.plans-row {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.plan-col {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.plan-card {
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+.plan-card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-3px);
+}
+
+.plan-card .card-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.plan-card ul {
+  padding-left: 0;
+  list-style: none;
+  margin-bottom: 1.2rem;
+  flex-grow: 1;
+}
+
+.plan-card ul li {
+  padding: 0.5rem 0;
+  color: #555;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.plan-card ul li:last-child {
+  border-bottom: none;
+}
+
+.plan-card ul li .me-2 {
+  color: #5cb85c;
+}
+
+.price-container {
+  text-align: center;
+  margin-bottom: 1.2rem;
+}
+
+.price {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.per-month {
+  font-size: 1rem;
+  color: #777;
+  margin-left: 0.25rem;
+}
+
+.most-popular {
+  background-color: #e1f5fe;
+  color: #0d47a1;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+}
+
+.pro-plan {
+  border: 2px solid #2979ff;
+}
+
+.plan-button {
+  border-radius: 6px;
+  padding: 0.8rem 1.4rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.get-started-button {
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  color: #495057;
+}
+
+.upgrade-button {
+  background-color: #2979ff;
+  color: #fff;
+}
+
+.highlighted {
+    border: 3px solid #2979ff; /* Highlighted border */
+    box-shadow: 0 8px 16px rgba(41, 121, 255, 0.3); /* Highlighted shadow */
+    transform: scale(1.03); /* Slightly scale up the card */
+  }

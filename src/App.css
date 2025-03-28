@@ -1,0 +1,23 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+.row {
+  margin: 0;
+}
+
+.col-md-3 {
+  padding: 0;
+  border-right: 1px solid #dee2e6;
+}
+
+.col-md-9 {
+  padding: 20px;
+}

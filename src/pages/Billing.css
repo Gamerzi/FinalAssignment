@@ -1,0 +1,234 @@
+.billing-container {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 1200px;
+  font-family: 'Arial', sans-serif;
+        background: linear-gradient(to right, #664de5, #7e57c2);
+        color: white;
+}
+
+h2 {
+  margin-bottom: 5px;
+  text-align: left;
+  font-size: 1.75rem;
+}
+
+.billing-description {
+  margin-bottom: 20px;
+}
+
+.billing-section {
+  margin-bottom: 20px;
+  padding: 20px;
+  background: white;
+  color: black;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease-in-out;
+}
+
+.billing-section:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Plan Summary Section */
+.plan-summary {
+  position: relative;
+  text-align: left;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.plan-summary .upgrade-button {
+  background-color: #664de5;
+  border: none;
+  font-size: 0.9rem;
+  padding: .5rem 1rem;
+}
+
+.plan-summary .plan-details {
+  padding: 1rem 0;
+}
+
+.plan-summary .plan-detail {
+  margin-bottom: 1rem;
+}
+
+.plan-summary .detail-label {
+  color: #888;
+  margin-bottom: .2rem;
+}
+
+.plan-summary .detail-value {
+  font-weight: 500;
+}
+
+.plan-summary .usage-detail {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Payment Method Section */
+.payment-method.new-card {
+  position: relative;
+  padding: 15px;
+  background: white;
+  color: black;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease-in-out;
+}
+
+.payment-method.new-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+}
+
+.payment-method .payment-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+}
+
+.payment-method .payment-logo {
+  align-items: flex-start;
+  margin-right: 15px;
+  order: 2;
+}
+
+.payment-method .payment-info p {
+  margin-bottom: 5px;
+}
+
+.payment-method .card-type {
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: bold;
+  order: 1;
+}
+
+.payment-method .payment-info {
+  order: 3;
+}
+
+.payment-method .change-button {
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+  order: 4;
+}
+
+.section-header .change-button.gradient {
+  float: right;
+}
+
+.change-button.gradient {
+  background: linear-gradient(to right, #664de5, #7e57c2);
+  color: white;
+  border: none;
+  font-size: 0.9rem;
+  padding: .5rem 1rem;
+}
+
+.button_detail {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Invoice Section */
+.invoice-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  color: black;
+  padding: 10px;
+}
+
+.invoice-header h4 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.invoice-header .download-button {
+  background-color: #664de5;
+  border: none;
+}
+
+.table {
+  width: 100%;
+  margin-bottom: 0;
+  border-collapse: collapse;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  padding: 12px 15px;
+  text-align: left;
+}
+
+td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Status styling */
+.status-paid {
+  color: green;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .billing-container {
+    padding: 15px;
+  }
+
+  .billing-section {
+    padding: 15px;
+  }
+
+  .col-md-6 {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .payment-method .payment-details {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .payment-method .payment-details svg {
+    margin-bottom: 10px;
+  }
+
+  th,
+  td {
+    padding: 0.75rem;
+  }
+}
+
+/* Changed billing title */
+h2{
+    color: white;
+}
+
+/*Changed description colr */
+.billing-description{
+    color: white;
+}
