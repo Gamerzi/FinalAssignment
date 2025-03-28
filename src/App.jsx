@@ -24,7 +24,7 @@ const App = () => {
         <Route
           path="/"
           element={
-            isAuthenticated() ? <Navigate to="/signup" /> : <Navigate to="/signin" />
+            isAuthenticated() ? <Navigate to="/signin" /> : <Navigate to="/signup" />
           }
         />
         {isAuthenticated() && (
