@@ -10,35 +10,34 @@ import SignUp from './pages/Signup';
 import SignIn from './pages/Signin';
 import './App.css';
 
-//Removed the authentication check, it is not being used 
 const App = () => {
   return (
     <Router>
       <Routes>
         <Route path="/signup" element={<SignUp />} />
         <Route path="/signin" element={<SignIn />} />
-        <Route path="/" element={<Navigate to="/signin" />} />
-          <Route
-            path="*"
-            element={
-              <Container fluid>
-                <Row>
-                  <Col md={3}>
-                    <Sidebar />
-                  </Col>
-                  <Col md={9}>
-                    <Routes>
-                      <Route path="/profile" element={<Profile />} />
-                      <Route path="/notifications" element={<Notifications />} />
-                      <Route path="/billing" element={<Billing />} />
-                      <Route path="/plans" element={<Plans />} />
-                      <Route path="*" element={<Navigate to="/profile" />} />
-                    </Routes>
-                  </Col>
-                </Row>
-              </Container>
-            }
-          />
+        <Route path="/" element={<Navigate to="/signup" />} /> {/* First goes to /signup */}
+        <Route
+          path="*"
+          element={
+            <Container fluid>
+              <Row>
+                <Col md={3}>
+                  <Sidebar />
+                </Col>
+                <Col md={9}>
+                  <Routes>
+                    <Route path="/profile" element={<Profile />} />
+                    <Route path="/notifications" element={<Notifications />} />
+                    <Route path="/billing" element={<Billing />} />
+                    <Route path="/plans" element={<Plans />} />
+                    <Route path="*" element={<Navigate to="/profile" />} />
+                  </Routes>
+                </Col>
+              </Row>
+            </Container>
+          }
+        />
       </Routes>
     </Router>
   );
