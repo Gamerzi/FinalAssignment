@@ -45,7 +45,7 @@ const SignIn = () => {
         <div className="extra-links">
           <a>Forgot Password?</a>
           <p>
-            Don't have an account? <a href="">Sign up</a>
+            Don't have an account? <a href="/signup">Sign up</a>
           </p>
         </div>
       </div>
