@@ -8,7 +8,7 @@ import './Sidebar.css';
 const Sidebar = () => {
   return (
     <Navbar bg="light" expand="lg" className="sidebar flex-column">
-      <Navbar.Brand as={Link} to="/" className="sidebar-brand">
+      <Navbar.Brand as={Link} to="/signin" className="sidebar-brand">
       <br></br>
         Baqer Ali 
         Assignment
