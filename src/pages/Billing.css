@@ -1,234 +1,322 @@
+/* --- Add this new rule or modify existing if needed --- */
+.plan-summary .detail-value-input.form-control.form-control-plaintext {
+  padding-left: 0; /* Align with labels */
+  padding-right: 0;
+  font-weight: 500; /* Match previous detail-value style */
+  color: black; /* Ensure text color is visible */
+  background-color: transparent; /* Ensure no background */
+  border: none; /* Ensure no border */
+  box-shadow: none; /* Ensure no focus shadow interfering */
+}
+
+/* Optional: Style when focusing */
+.plan-summary .detail-value-input.form-control:focus {
+   background-color: #f8f9fa; /* Light background on focus */
+   box-shadow: none;
+   /* border-bottom: 1px solid #664de5; */ /* Optional bottom border focus */
+   padding: .375rem .75rem; /* Restore some padding on focus if needed */
+   margin-left: -0.75rem; /* Adjust margin to align if padding is added */
+}
+
+
+/* --- Keep all your existing CSS below --- */
 .billing-container {
-  margin: 20px auto;
-  padding: 20px;
-  max-width: 1200px;
-  font-family: 'Arial', sans-serif;
-        background: linear-gradient(to right, #664de5, #7e57c2);
-        color: white;
+margin: 20px auto;
+padding: 20px;
+max-width: 1200px;
+font-family: 'Arial', sans-serif;
+      background: linear-gradient(to right, #664de5, #7e57c2);
+      color: white;
 }
 
 h2 {
-  margin-bottom: 5px;
-  text-align: left;
-  font-size: 1.75rem;
+margin-bottom: 5px;
+text-align: left;
+font-size: 1.75rem;
+color: white; /* Combined from previous snippet */
 }
 
 .billing-description {
-  margin-bottom: 20px;
+margin-bottom: 20px;
+color: white; /* Combined from previous snippet */
 }
 
 .billing-section {
-  margin-bottom: 20px;
-  padding: 20px;
-  background: white;
-  color: black;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease-in-out;
+margin-bottom: 20px;
+padding: 20px;
+background: white;
+color: black;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+transition: all 0.3s ease-in-out;
 }
 
 .billing-section:hover {
-  transform: scale(1.02);
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+transform: translateY(-3px); /* Change transform for a lift effect */
+box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* Plan Summary Section */
 .plan-summary {
-  position: relative;
-  text-align: left;
+position: relative;
+text-align: left;
 }
 
 .section-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 0.5rem; /* Add some space below header */
 }
 
-.plan-summary .upgrade-button {
-  background-color: #664de5;
-  border: none;
-  font-size: 0.9rem;
-  padding: .5rem 1rem;
-}
 
 .plan-summary .plan-details {
-  padding: 1rem 0;
+padding-top: 0.5rem; /* Adjust padding */
 }
 
 .plan-summary .plan-detail {
-  margin-bottom: 1rem;
+margin-bottom: 0.5rem; /* Reduce margin between details */
 }
 
+/* Use Form.Label style now */
 .plan-summary .detail-label {
-  color: #888;
-  margin-bottom: .2rem;
+color: #888;
+margin-bottom: .2rem;
+font-size: 0.85rem; /* Make label slightly smaller */
 }
 
-.plan-summary .detail-value {
-  font-weight: 500;
-}
+/* Styling handled by .detail-value-input now */
+/* .plan-summary .detail-value {
+font-weight: 500;
+} */
 
-.plan-summary .usage-detail {
-  display: flex;
-  justify-content: flex-end;
-}
 
 /* Payment Method Section */
 .payment-method.new-card {
-  position: relative;
-  padding: 15px;
-  background: white;
-  color: black;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease-in-out;
+position: relative;
+padding: 15px;
+background: white;
+color: black;
+border-radius: 8px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+transition: all 0.3s ease-in-out;
 }
 
-.payment-method.new-card:hover {
-  transform: scale(1.02);
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
-}
+/* payment-method hover is handled by billing-section:hover now */
+/* .payment-method.new-card:hover { ... } */
 
 .payment-method .payment-details {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 10px;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 10px;
 }
 
 .payment-method .payment-logo {
-  align-items: flex-start;
-  margin-right: 15px;
-  order: 2;
+align-self: flex-start; /* Corrected typo */
+margin-bottom: 15px; /* Add margin below logo */
+margin-right: 0; /* Remove right margin */
+order: 2;
+min-height: 60px; /* Ensure space for the icon/image */
+display: flex; /* Align icon/image */
+align-items: center; /* Vertically center icon/image */
+}
+.payment-method .payment-logo img {
+border: 1px solid #eee; /* Add subtle border to uploaded image */
+max-height: 60px !important; /* Ensure image respects max height */
+}
+/* Specific style for the FontAwesome icon inside the logo div */
+.payment-method .payment-logo svg {
+ margin: auto 0; /* Center icon vertically if needed */
 }
 
+
 .payment-method .payment-info p {
-  margin-bottom: 5px;
+margin-bottom: 5px;
 }
 
 .payment-method .card-type {
-  text-align: left;
-  font-size: 1.2rem;
-  font-weight: bold;
-  order: 1;
+text-align: left;
+font-size: 1.2rem;
+font-weight: bold;
+order: 1;
+margin-bottom: 0.5rem; /* Add space below type */
 }
 
 .payment-method .payment-info {
-  order: 3;
+order: 3;
+width: 100%; /* Ensure info takes full width */
 }
 
 .payment-method .change-button {
-  position: relative;
-  width: 100%;
-  margin-top: 10px;
-  order: 4;
+position: relative;
+width: 100%;
+margin-top: 15px; /* Increased margin */
+order: 4;
 }
 
-.section-header .change-button.gradient {
-  float: right;
-}
-
+/* Button styles */
 .change-button.gradient {
-  background: linear-gradient(to right, #664de5, #7e57c2);
-  color: white;
-  border: none;
-  font-size: 0.9rem;
-  padding: .5rem 1rem;
+background: linear-gradient(to right, #664de5, #7e57c2);
+color: white;
+border: none;
+font-size: 0.9rem;
+padding: .5rem 1rem;
 }
 
-.button_detail {
-  display: flex;
-  justify-content: flex-end;
-}
+/* Removed redundant/conflicting rule */
+/* .button_detail {
+display: flex;
+justify-content: flex-end;
+} */
 
 /* Invoice Section */
 .invoice-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 15px;
-  color: black;
-  padding: 10px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 15px;
+color: black;
+padding: 10px 0; /* Adjust padding */
 }
 
 .invoice-header h4 {
-  font-size: 1.5rem;
-  margin: 0;
+font-size: 1.5rem;
+margin: 0;
 }
 
-.invoice-header .download-button {
-  background-color: #664de5;
-  border: none;
+.table-responsive {
+  margin-top: 15px; /* Add some space above the table */
 }
 
 .table {
-  width: 100%;
-  margin-bottom: 0;
-  border-collapse: collapse;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  overflow: hidden;
-  transition: all 0.3s ease-in-out;
+width: 100%;
+margin-bottom: 0;
+border-collapse: collapse;
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+border-radius: 10px;
+overflow: hidden;
+transition: all 0.3s ease-in-out; /* Removed hover transition from here */
 }
 
-th {
-  background-color: #f2f2f2;
-  font-weight: bold;
-  padding: 12px 15px;
-  text-align: left;
+/* Added table specific class */
+.invoice-table th {
+background-color: #f2f2f2;
+font-weight: bold;
+padding: 12px 15px;
+text-align: left;
+white-space: nowrap; /* Prevent header wrapping */
 }
 
-td {
-  padding: 12px 15px;
-  border-bottom: 1px solid #ddd;
+.invoice-table td {
+padding: 12px 15px;
+border-bottom: 1px solid #ddd;
+vertical-align: middle; /* Align cell content vertically */
 }
-
-tbody tr:hover {
-  transform: scale(1.02);
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+/* Keep row hover on the section level if preferred, or apply here */
+.invoice-table tbody tr:hover {
+background-color: #f8f9fa; /* Subtle hover background */
+/* transform: scale(1.02); */ /* Scale might look odd on table rows */
+/* box-shadow: 0 0 30px rgba(0, 0, 0, 0.15); */
 }
 
 /* Status styling */
 .status-paid {
-  color: green;
+color: green;
+font-weight: bold;
 }
+.status-paid .svg-inline--fa { /* Target FontAwesome icon */
+ margin-right: 4px;
+}
+
+.status-pending {
+color: #ffc107; /* Example: Warning color */
+font-weight: bold;
+}
+.status-overdue {
+color: #dc3545; /* Example: Danger color */
+font-weight: bold;
+}
+.status-unknown { /* Fallback style */
+color: #6c757d;
+font-style: italic;
+}
+
+
+/* Table Action Button Alignment */
+.invoice-table td .btn {
+vertical-align: middle; /* Align icon buttons nicely */
+margin: 0 2px; /* Add tiny space between buttons if you add more */
+}
+
+
+/* Modal Styling Enhancements */
+.modal-header {
+background: linear-gradient(to right, #664de5, #7e57c2);
+color: white;
+border-bottom: none;
+}
+.modal-header .btn-close {
+filter: invert(1) grayscale(100%) brightness(200%);
+}
+.modal-title {
+font-weight: bold;
+}
+.modal-footer {
+border-top: none;
+}
+.modal-footer .btn.gradient {
+ background: linear-gradient(to right, #664de5, #7e57c2);
+ color: white;
+ border: none;
+}
+.modal-body form label:after {
+content: " *";
+color: red;
+margin-left: 2px;
+}
+
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
-  .billing-container {
-    padding: 15px;
-  }
-
-  .billing-section {
-    padding: 15px;
-  }
-
-  .col-md-6 {
-    width: 100%;
-    margin-bottom: 15px;
-  }
-
-  .payment-method .payment-details {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .payment-method .payment-details svg {
-    margin-bottom: 10px;
-  }
-
-  th,
-  td {
-    padding: 0.75rem;
-  }
+.billing-container {
+  padding: 15px;
 }
 
-/* Changed billing title */
-h2{
-    color: white;
+.billing-section {
+  padding: 15px;
 }
 
-/*Changed description colr */
-.billing-description{
-    color: white;
+.col-md-6 {
+  /* width: 100%; */ /* Bootstrap handles this */
+  margin-bottom: 20px; /* Increased margin */
 }
+
+.payment-method .payment-details {
+  /* Already column, looks ok */
+}
+
+ .invoice-table th,
+ .invoice-table td {
+  padding: 0.75rem;
+  font-size: 0.9rem; /* Slightly smaller font on mobile */
+}
+ .invoice-table td .btn {
+     padding: 0.2rem 0.4rem; /* Smaller buttons */
+     font-size: 0.8rem;
+ }
+ .section-header {
+     flex-direction: column;
+     align-items: flex-start;
+ }
+ .section-header h4 {
+     margin-bottom: 0.5rem;
+ }
+ .section-header .btn {
+      align-self: flex-start; /* Align button left on mobile */
+      margin-top: 0.5rem;
+ }
+
+}
+
+/* Removed redundant rules previously moved */
